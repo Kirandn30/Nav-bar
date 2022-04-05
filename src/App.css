@@ -16,11 +16,12 @@ h1{
   height: 100vh;
   width: 20vh;
 display: inline-block;
+/* transition:all .4s ease 0s */
 
 }
 
 .option{
-  height: 10vh;
+  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,8 +45,8 @@ display: inline-block;
 }
 
 .tabs{
+  height: 81.5vh;
   width: 200vh;
-  height: 97.7vh;
   display: flex;
   justify-content: center;
   align-items: center;

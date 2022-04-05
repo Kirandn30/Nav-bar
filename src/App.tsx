@@ -17,30 +17,28 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 function App() {
 
   const [open, setOpen] = useState(true)
+  const [option, setOption] = useState<string>("option one")
 
   const expand = () => {
     setOpen(true)
   }
 
+
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <div className='navTab'>
-          {open ? <SideNav open={open} setOpen={setOpen} /> : <div className='expand' onClick={expand}><ArrowRightAltIcon style={{ fontSize: "50px" }} /></div>}
-          <Routes>
-            <Route path="option1" element={<One />} />
-            <Route path="option2" element={<Two />} />
-            <Route path="option3" element={<Three />} />
-            <Route path="option4" element={<Four />} />
-            <Route path="option5" element={<Five />} />
-            <Route path="option6" element={<Six />} />
-            <Route path="option7" element={<Seven />} />
-            <Route path="option8" element={<Eight />} />
-          </Routes>
-        </div>
+    <div className="App">
+      <Header />
+      <div className='navTab'>
+        {open ? <SideNav open={open} setOpen={setOpen} setOption={setOption} /> : <div className='expand' onClick={expand}><ArrowRightAltIcon style={{ fontSize: "50px" }} /></div>}
+        {option == "option one" && <One />}
+        {option == "option two" && <Two />}
+        {option == "option three" && <Three />}
+        {option == "option four" && <Four />}
+        {option == "option five" && <Five />}
+        {option == "option six" && <Six />}
+        {option == "option seven" && <Seven />}
+        {option == "option eight" && <Eight />}
       </div>
-    </BrowserRouter >
+    </div>
   );
 }
 
